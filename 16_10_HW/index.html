@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>16.10 Домашно</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    section {
+      margin-left: 10%;
+    }
+
+    section h2 {
+      margin-left: -5%;
+      margin-bottom: 8px;
+    }
+
+    blockquote {
+      margin: 0;
+      margin-left: -5%;
+      margin-bottom: 40px
+    }
+
+    blockquote p {
+      font-style: italic;
+      margin: 0;
+    }
+
+    .outputs {
+      background: lightgray;
+      padding: 5px;
+      color: red;
+      font-weight: bold;
+      display: none;
+    }
+
+    .numval {
+      max-width: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Домашно за 16.10</h1>
+  </header>
+  <section>
+    <h2>Упражнение 1</h2>
+    <blockquote>
+      <p>Напишете скрипт който проверява дадено число дали е положително или отрицателно.</p>
+    </blockquote>
+    <input id="posNeg">
+    <button type="button" onclick="posNegFunction()">Провери</button>
+    <p>Числото е: <span class="outputs" id="posNegOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 2</h2>
+    <blockquote>
+      <p>Напишете скрипт който намира най-голямото число от три числа.</p>
+    </blockquote>
+    <input class="numval" id="a">
+    <input class="numval" id="b">
+    <input class="numval" id="c">
+    <button type="button" onclick="biggestFunction()">Провери</button>
+    <p>Най-голятмото числото е: <span class="outputs" id="biggestOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 3</h2>
+    <blockquote>
+      <p>Напишете скрипт който принтира всички числа от 0 до 100 които се делят на 3 (използвайте for).</p>
+    </blockquote>
+    <button type="button" onclick="divideByThree()">Провери</button>
+    <p>Числата са: <span class="outputs" id="divideByThreeOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 4</h2>
+    <blockquote>
+      <p>Напишете скрипт който принтира всички числа от 20 до 0 (използвайте for).</p>
+    </blockquote>
+    <button type="button" onclick="backwardsCount()">Провери</button>
+    <p>Числата са: <span class="outputs" id="backwardsCountOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 5</h2>
+    <blockquote>
+      <p>Създайте променлива language, която може да приеме стойност например - "es", "de", "en", "bg". Напишете скрипт който казва "Hello world" на различни езици в зависимост от стойността на променливата.</p>
+    </blockquote>
+    <select id = "Languages">
+        <option disabled selected value style="display:none"> -- моля изберете -- </option>
+        <option value = "Hola Mundo!">ES</option>
+        <option value = "
+Hallo Welt!">DE</option>
+        <option value = "Hello World!">EN</option>
+        <option value = "
+Здравей свят!">BG</option>
+    </select>
+    <button type="button" onclick="languageCheck()">Провери</button>
+    <p>"Hello World" на <span class="outputs" id="lg"></span> e : <span class="outputs" id="languageCheckOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 6</h2>
+    <blockquote>
+      <p>Напишете скрипт който пише оценка при следните брой точки:<br>
+    от 1 до 60 точки - слаб 2 <br>
+    от 61 до 70 точки - среден 3 <br>
+    от 71 до 80 точки - добър 4 <br>
+    от 81 до 90 точки - много добър 5 <br>
+    от 91 до 100 точки - отличен 6</p>
+    </blockquote>
+    <input id="score">
+    <button type="button" onclick="scoreCheck()">Провери</button>
+    <p>Оценката е : <span class="outputs" id="scoreCheckOutput"></span></p>
+    <hr>
+  </section>
+  <section>
+    <h2>Упражнение 7</h2>
+    <blockquote>
+      <p>Напишете скрипт който пише името на месеца според зададено число от 1 до 12</p>
+    </blockquote>
+    <input id="monthNum">
+    <button type="button" onclick="monthCheck()">Провери</button>
+    <p>Името на месеца е : <span class="outputs" id="monthCheckOutput"></span></p>
+    <hr>
+  </section>
+  <script>
+    function posNegFunction() {
+      var x, text;
+
+      x = document.getElementById("posNeg").value;
+
+      if (isNaN(x)) {
+        text = "Това не е число";
+      } else if (x > 0) {
+        text = "Положително";
+      } else if (x < 0) {
+        text = "Отрицателно";
+      } else {
+        text = "Нула";
+      }
+      document.getElementById("posNegOutput").innerHTML = text;
+      document.getElementById("posNegOutput").style.display = "inline";
+    }
+
+    function biggestFunction() {
+      var a, b, c, text;
+
+      a = Number(document.getElementById("a").value);
+      b = Number(document.getElementById("b").value);
+      c = Number(document.getElementById("c").value);
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        text = "Едно от 3те не е число";
+      } else {
+        if (a > b) {
+          if (a > c) {
+            text = a + " e най-голямото число.";
+          } else {
+            text = c + " e най-голямото число.";
+          }
+        } else if (b > a) {
+          if (b > c) {
+            text = b + " e най-голямото число.";
+          } else {
+            text = c + " e най-голямото число.";
+          }
+        } else {
+          text = c + " e най-голямото число.";
+        };
+        if (a > b) {
+          if (a > c) {
+            text = a + " e най-голямото число.";
+          } else {
+            text = c + " e най-голямото число.";
+          }
+        } else if (b > a) {
+          if (b > c) {
+            text = b + " e най-голямото число.";
+          } else {
+            text = c + " e най-голямото число.";
+          }
+        } else {
+          text = c + " e най-голямото число.";
+        };
+      };
+
+      document.getElementById("biggestOutput").innerHTML = text;
+      document.getElementById("biggestOutput").style.display = "inline";
+    }
+
+    function divideByThree() {
+      var i, text, array = [];
+      for (i = 0; i <= 100; i++) {
+        if (i === 0) {
+
+        } else if (i % 3 === 0) {
+          array.push(i);
+        }
+        text = array;
+        document.getElementById("divideByThreeOutput").innerHTML = text;
+        document.getElementById("divideByThreeOutput").style.display = "inline";
+      }
+    }
+
+    function backwardsCount() {
+      var i, text, array = [];
+
+      for (i = 0; i <= 20; i++) {
+        array.push(i);
+      }
+      text = array.reverse();
+      document.getElementById("backwardsCountOutput").innerHTML = text;
+      document.getElementById("backwardsCountOutput").style.display = "inline";
+    }
+
+    function languageCheck() {
+      var language, text, params, paramsIndex, paramsIndexLg;
+      params = document.getElementById("Languages");
+      paramsIndex = params.options[params.selectedIndex].value;
+      paramsIndexLg = params.options[params.selectedIndex].text;
+
+      text = paramsIndex;
+      language = paramsIndexLg;
+      document.getElementById("lg").innerHTML = language;
+      document.getElementById("lg").style.display = "inline";
+      document.getElementById("languageCheckOutput").innerHTML = text;
+      document.getElementById("languageCheckOutput").style.display = "inline";
+
+    }
+
+    function scoreCheck() {
+      var text, score;
+
+      score = Number(document.getElementById("score").value);
+      switch (true) {
+        case score >=91:
+          text = "Отличен 6";
+          break;
+        case score >=81:
+          text = "Много добър 5";
+          break;
+        case score >=71:
+          text = "Добър 4";
+          break;
+        case score >=61:
+          text = "Среден 3";
+          break;
+        default:
+          text = "Слаб 2";
+      }
+      document.getElementById("scoreCheckOutput").innerHTML = text;
+      document.getElementById("scoreCheckOutput").style.display = "inline";
+
+    }
+
+    function monthCheck() {
+      var monthNum, text;
+      monthNum = Number(document.getElementById("monthNum").value);
+      switch (monthNum) {
+        case 1:
+          text = "Януари";
+          break;
+        case 2:
+          text = "Февруари";
+          break;
+        case 3:
+          text = "Март";
+          break;
+        case 4:
+          text = "Април";
+          break;
+        case 5:
+          text = "Май";
+          break;
+        case 6:
+          text = "Юни";
+          break;
+        case 7:
+          text = "Юли";
+          break;
+        case 8:
+          text = "Август";
+          break;
+        case 9:
+          text = "Септември";
+          break;
+        case 10:
+          text = "Октомври";
+          break;
+        case 11:
+          text = "Ноември";
+          break;
+        case 12:
+          text = "Декември";
+          break;
+        default:
+          text = "Моля изберете число от 1 до 12";
+      }
+
+
+      document.getElementById("monthCheckOutput").innerHTML = text;
+      document.getElementById("monthCheckOutput").style.display = "inline";
+
+    }
+
+    function multiplicationTable() {
+      var i, y, c;
+      console.log("Упражнение 8: Таблица за Умножение:");
+      for (i = 1; i < 11; i++) {
+        for (y = 1; y < 11; y++) {
+          c = i + " x " + y + " = " + i*y;
+          console.log(c);
+        }
+      }
+    }
+    multiplicationTable();
+
+  </script>
+</body>
+
+</html>
