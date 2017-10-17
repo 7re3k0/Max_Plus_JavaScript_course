@@ -1,5 +1,7 @@
 body {
   font-family: sans-serif;
+  max-width: 1128px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -13,7 +15,7 @@ section {
 
 section h2 {
   margin-bottom: 8px;
-  margin-top: 48px;
+  margin-top: 80px;
 }
 
 input {
@@ -40,6 +42,7 @@ input:focus {
 blockquote {
   margin: 0;
 }
+
 blockquote p {
   font-style: italic;
   margin: 0;
@@ -75,6 +78,7 @@ button {
   position: relative;
   left: -10px;
 }
+
 .highlight {
   color: #9b4dca;
 }

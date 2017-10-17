@@ -31,7 +31,7 @@ function sumArr() {
       x += arr[i];
     }
   }
-  document.getElementById('sumArrOutput').innerHTML = 'Сбора на масива е ' + x;
+  document.getElementById('sumArrOutput').innerHTML = 'Сбора на масива е <span class="highlight">' + x + '</span>';
   document.getElementById('sumArrOutput').style.display = 'inline';
   arr = [];
   x = undefined;
@@ -52,10 +52,8 @@ function minMaxFunc() {
           arr.push(i);
         };
       }
+      alert('Има ' + arr.length + ' броя числа от ' + startNumber + ' до ' + endNumber + '.\n\n' + arr);
     };
-    document.getElementById('minMaxFuncOutput').innerHTML = 'Числата са в конзолата';
-    document.getElementById('minMaxFuncOutput').style.display = 'inline';
-    console.log(arr);
     arr = [];
   }
   numberInput1 = Number(document.getElementById('numInput1').value);
@@ -69,14 +67,14 @@ function reverseArr() {
   for (i = 0; i < arr.length; i++) {
     x.unshift(arr[i]);
   }
-  document.getElementById('reverseArrOutput').innerHTML = 'Обратния масив е [' + x + ']';
+  document.getElementById('reverseArrOutput').innerHTML = 'Обратния масив е <span class="highlight">[ ' + x + ' ]</span>';
   document.getElementById('reverseArrOutput').style.display = 'inline';
   arr = [];
   x = undefined;
 }
 
 function veggieList() {
-  arr = ['Cabbage', 'Radish', 'Lettuce', 'Leek', 'Pepper'];
+  arr = ['Cabbage', 'Broccoli', 'Lettuce', 'Leek', 'Pepper', 'Onion'];
   for (i = 0; i < arr.length; i++) {
     if (x == undefined) {
       x = '<li><span class="list-item">' + arr[i] + '</span></li>'
