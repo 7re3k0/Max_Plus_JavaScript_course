@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+section {
+  margin-left: 10%;
+}
+
+section h2 {
+  margin-left: -5%;
+  margin-bottom: 8px;
+}
+
+blockquote {
+  margin: 0;
+  margin-left: -5%;
+  margin-bottom: 40px
+}
+
+blockquote p {
+  font-style: italic;
+  margin: 0;
+}
+
+.outputs {
+  background: lightgray;
+  padding: 5px;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
