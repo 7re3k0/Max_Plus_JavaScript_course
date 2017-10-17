@@ -1,9 +1,12 @@
-// document.getElementById("posNegOutput").innerHTML = text;
-// document.getElementById("posNegOutput").style.display = "inline";
-var arr = [], i, x;
+var arr = [],
+  i,
+  x,
+  numberInput1,
+  numberInput2;
+
 
 function minNumberArr() {
-  arr = [1,4,6,-8,99,-98,3,478,-54,123,0];
+  arr = [1, 4, 6, -8, 99, -98, 3, 478, -54, 123, 0];
   for (i = 0; i < arr.length; i++) {
     if (x == undefined) {
       x = arr[i];
@@ -16,7 +19,7 @@ function minNumberArr() {
 };
 
 function sumArr() {
-  arr = [1,2,3,4,5,6];
+  arr = [1, 2, 3, 4, 5, 6];
   for (i = 0; i < arr.length; i++) {
     if (x == undefined) {
       x = arr[i];
@@ -27,3 +30,26 @@ function sumArr() {
   document.getElementById('sumArrOutput').innerHTML = x;
   document.getElementById('sumArrOutput').style.display = 'inline';
 };
+
+function minMaxFunc() {
+  function starEndArr(startNumber,endNumber) {
+    if (isNaN(startNumber) || isNaN(endNumber)) {
+      console.log('Едно от двете не е число');
+    } else {
+      if (startNumber < endNumber) {
+        for ( i = startNumber; i <= endNumber; i++) {
+          arr.push(i);
+        };
+      } else {
+        for ( i = startNumber; i >= endNumber; i--) {
+          arr.push(i);
+        };
+      }
+    };
+    console.log(arr);
+    arr = [];
+  }
+  numberInput1 = Number(document.getElementById('numInput1').value);
+  numberInput2 = Number(document.getElementById('numInput2').value);
+  starEndArr(numberInput1,numberInput2);
+}
