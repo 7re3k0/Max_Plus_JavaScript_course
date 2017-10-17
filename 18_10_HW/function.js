@@ -55,7 +55,7 @@ function minMaxFunc() {
 }
 
 function reverseArr() {
-  arr = [1,2,3,4,5,6];
+  arr = [1, 2, 3, 4, 5, 6];
   x = [];
   for (i = 0; i < arr.length; i++) {
     x.unshift(arr[i]);
@@ -63,3 +63,17 @@ function reverseArr() {
   document.getElementById('reverseArrOutput').innerHTML = '[' + x + ']';
   document.getElementById('reverseArrOutput').style.display = 'inline';
 }
+
+function veggieList() {
+  arr = ['Cabbage', 'Radish', 'Lettuce', 'Leek', 'Pepper'];
+  for (i = 0; i < arr.length; i++) {
+    if (x == undefined) {
+      x = '<li>' + arr[i] + '</li>'
+    } else {
+      x += '<li>' + arr[i] + '</li>';
+    }
+  }
+  
+  document.getElementById('veggieListOutput').innerHTML = '<ul id="vegetables">' + x + '</ul>';
+  document.getElementById('veggieListOutput').style.display = 'block';
+};

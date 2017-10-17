@@ -25,6 +25,16 @@ blockquote {
 blockquote p {
   font-style: italic;
   margin: 0;
+  display: inline;
+  line-height: 1.5;
+}
+
+blockquote xmp {
+  display: inline-block;
+  background-color: lightgray;
+  font-weight: bold;
+  padding: 2px 3px;
+  margin: 0;
 }
 
 .outputs {
@@ -33,4 +43,15 @@ blockquote p {
   color: red;
   font-weight: bold;
   display: none;
+  margin-top: 5px;
+}
+
+#veggieListOutput ul {
+  margin: 0;
+  padding: 5px;
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+#veggieListOutput ul li {
+  padding: 5px;
 }
