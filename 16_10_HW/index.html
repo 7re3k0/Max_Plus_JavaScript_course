@@ -20,51 +20,62 @@
 </head>
 
 <body>
-  <header>
-    <h1>Домашно за 16.10</h1>
-  </header>
-  <section>
-    <h2>Упражнение 1</h2>
-    <blockquote>
-      <p>Напишете скрипт който проверява дадено число дали е положително или отрицателно.</p>
-    </blockquote>
-    <input id="posNeg">
-    <button type="button" onclick="posNegFunction()">Провери</button>
-    <p>Числото е: <blockquote class="outputs" id="posNegOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 2</h2>
-    <blockquote>
-      <p>Напишете скрипт който намира най-голямото число от три числа.</p>
-    </blockquote>
-    <input class="numval" id="a">
-    <input class="numval" id="b">
-    <input class="numval" id="c">
-    <button type="button" onclick="biggestFunction()">Провери</button>
-    <p>Най-голятмото числото е: <blockquote class="outputs" id="biggestOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 3</h2>
-    <blockquote>
-      <p>Напишете скрипт който принтира всички числа от 0 до 100 които се делят на 3 (използвайте for).</p>
-    </blockquote>
-    <button type="button" onclick="divideByThree()">Провери</button>
-    <p>Числата са: <blockquote class="outputs" id="divideByThreeOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 4</h2>
-    <blockquote>
-      <p>Напишете скрипт който принтира всички числа от 20 до 0 (използвайте for).</p>
-    </blockquote>
-    <button type="button" onclick="backwardsCount()">Провери</button>
-    <p>Числата са: <blockquote class="outputs" id="backwardsCountOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 5</h2>
-    <blockquote>
-      <p>Създайте променлива language, която може да приеме стойност например - "es", "de", "en", "bg". Напишете скрипт който казва "Hello world" на различни езици в зависимост от стойността на променливата.</p>
-    </blockquote>
-    <select id = "Languages">
+  <main>
+    <header>
+      <h3><a href="/Max_Plus_JavaScript_course"><i class="fa fa-arrow-left" aria-hidden="true"></i> Обратно</a></h3>
+      <h1>Домашно за 16.10</h1>
+      <h4><a href="https://github.com/7re3k0/Max_Plus_JavaScript_course/blob/master/16_10_HW/function.js" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Линк към JS файла</a></h4>
+    </header>
+    <section>
+      <h2>Упражнение 1</h2>
+      <blockquote>
+        <p>Напишете скрипт който проверява дадено число дали е положително или отрицателно.</p>
+      </blockquote>
+      <input id="posNeg">
+      <button type="button" onclick="posNegFunction()">Провери</button>
+      <p>Числото е:
+        <blockquote class="outputs" id="posNegOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 2</h2>
+      <blockquote>
+        <p>Напишете скрипт който намира най-голямото число от три числа.</p>
+      </blockquote>
+      <input class="numval" id="a">
+      <input class="numval" id="b">
+      <input class="numval" id="c">
+      <button type="button" onclick="biggestFunction()">Провери</button>
+      <p>Най-голятмото числото е:
+        <blockquote class="outputs" id="biggestOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 3</h2>
+      <blockquote>
+        <p>Напишете скрипт който принтира всички числа от 0 до 100 които се делят на 3 (използвайте for).</p>
+      </blockquote>
+      <button type="button" onclick="divideByThree()">Провери</button>
+      <p>Числата са:
+        <blockquote class="outputs" id="divideByThreeOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 4</h2>
+      <blockquote>
+        <p>Напишете скрипт който принтира всички числа от 20 до 0 (използвайте for).</p>
+      </blockquote>
+      <button type="button" onclick="backwardsCount()">Провери</button>
+      <p>Числата са:
+        <blockquote class="outputs" id="backwardsCountOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 5</h2>
+      <blockquote>
+        <p>Създайте променлива language, която може да приеме стойност например - "es", "de", "en", "bg". Напишете скрипт който казва "Hello world" на различни езици в зависимост от стойността на променливата.</p>
+      </blockquote>
+      <select id="Languages">
         <option disabled selected value style="display:none"> -- моля изберете -- </option>
         <option value = "Hola Mundo!">ES</option>
         <option value = "
@@ -73,32 +84,35 @@ Hallo Welt!">DE</option>
         <option value = "
 Здравей свят!">BG</option>
     </select>
-    <button type="button" onclick="languageCheck()">Провери</button>
-    <p>"Hello World" на <blockquote class="outputs" id="lg" style="margin-right: 16px;"></blockquote><blockquote class="outputs" id="languageCheckOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 6</h2>
-    <blockquote>
-      <p>Напишете скрипт който пише оценка при следните брой точки:<br>
-    от 1 до 60 точки - слаб 2 <br>
-    от 61 до 70 точки - среден 3 <br>
-    от 71 до 80 точки - добър 4 <br>
-    от 81 до 90 точки - много добър 5 <br>
-    от 91 до 100 точки - отличен 6</p>
-    </blockquote>
-    <input id="score">
-    <button type="button" onclick="scoreCheck()">Провери</button>
-    <p>Оценката е : <blockquote class="outputs" id="scoreCheckOutput"></blockquote></p>
-  </section>
-  <section>
-    <h2>Упражнение 7</h2>
-    <blockquote>
-      <p>Напишете скрипт който пише името на месеца според зададено число от 1 до 12</p>
-    </blockquote>
-    <input id="monthNum">
-    <button type="button" onclick="monthCheck()">Провери</button>
-    <p>Името на месеца е : <blockquote class="outputs" id="monthCheckOutput"></blockquote></p>
-  </section>
+      <button type="button" onclick="languageCheck()">Провери</button>
+      <p>"Hello World" на
+        <blockquote class="outputs" id="lg" style="margin-right: 16px;"></blockquote>
+        <blockquote class="outputs" id="languageCheckOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 6</h2>
+      <blockquote>
+        <p>Напишете скрипт който пише оценка при следните брой точки:<br> от 1 до 60 точки - слаб 2 <br> от 61 до 70 точки - среден 3 <br> от 71 до 80 точки - добър 4 <br> от 81 до 90 точки - много добър 5 <br> от 91 до 100 точки - отличен 6</p>
+      </blockquote>
+      <input id="score">
+      <button type="button" onclick="scoreCheck()">Провери</button>
+      <p>Оценката е :
+        <blockquote class="outputs" id="scoreCheckOutput"></blockquote>
+      </p>
+    </section>
+    <section>
+      <h2>Упражнение 7</h2>
+      <blockquote>
+        <p>Напишете скрипт който пише името на месеца според зададено число от 1 до 12</p>
+      </blockquote>
+      <input id="monthNum">
+      <button type="button" onclick="monthCheck()">Провери</button>
+      <p>Името на месеца е :
+        <blockquote class="outputs" id="monthCheckOutput"></blockquote>
+      </p>
+    </section>
+  </main>
   <script src="function.js"></script>
 </body>
 

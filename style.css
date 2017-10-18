@@ -1,30 +1,56 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
   max-width: 1128px;
   margin: 0 auto;
+  background-color: #f4f5f6;
 }
-h1 {
-  margin-top: 80px;
+
+main {
+  padding: 80px 5%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+header {
   text-align: center;
+  position: relative;
 }
-nav {
-  margin-top: 56px;
-}
-nav ul {
-  list-style-type: none;
-}
-nav ul li {
-  padding-bottom: 16px;
-  border-bottom: 1px solid #f4f5f6;
-}
-.fa {
-  font-size: 24px;
+
+header h4 .fa {
+  font-size: 16px;
   top: -2px;
   position: relative;
 }
 
-section {
-  margin-left: 5%;
+header h3 {
+  position: absolute;
+  top: 12px;
+  display: block;
+}
+
+nav {
+  margin-top: 56px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4f5f6;
+}
+
+nav .fa, header h3 .fa {
+  font-size: 24px;
+  top: -2px;
+  position: relative;
 }
 
 section h2 {
@@ -81,6 +107,11 @@ blockquote xmp {
 button {
   margin-top: 16px;
   margin-right: 16px;
+}
+
+button:focus {
+  background-color: #9b4dca;
+  border-color: #9b4dca;
 }
 
 .outputs {
