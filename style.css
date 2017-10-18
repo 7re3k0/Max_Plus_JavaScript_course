@@ -3,10 +3,24 @@ body {
   max-width: 1128px;
   margin: 0 auto;
 }
-
 h1 {
+  margin-top: 80px;
   text-align: center;
-  font-size: 40px;
+}
+nav {
+  margin-top: 56px;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4f5f6;
+}
+.fa {
+  font-size: 24px;
+  top: -2px;
+  position: relative;
 }
 
 section {
@@ -37,6 +51,12 @@ input {
 input:focus {
   border-color: #9b4dca;
   outline: 0;
+}
+
+select {
+  max-width: 20%;
+  margin: 16px 0;
+  margin-right: 16px;
 }
 
 blockquote {

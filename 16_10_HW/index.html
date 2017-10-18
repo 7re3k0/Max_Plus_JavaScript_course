@@ -4,7 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>16.10 Домашно</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+  <!-- Milligram CSS minified -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+  <!-- Font Awesome CSS minified -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--  Main Stylesheet-->
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -18,8 +30,7 @@
     </blockquote>
     <input id="posNeg">
     <button type="button" onclick="posNegFunction()">Провери</button>
-    <p>Числото е: <span class="outputs" id="posNegOutput"></span></p>
-    <hr>
+    <p>Числото е: <blockquote class="outputs" id="posNegOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 2</h2>
@@ -30,8 +41,7 @@
     <input class="numval" id="b">
     <input class="numval" id="c">
     <button type="button" onclick="biggestFunction()">Провери</button>
-    <p>Най-голятмото числото е: <span class="outputs" id="biggestOutput"></span></p>
-    <hr>
+    <p>Най-голятмото числото е: <blockquote class="outputs" id="biggestOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 3</h2>
@@ -39,8 +49,7 @@
       <p>Напишете скрипт който принтира всички числа от 0 до 100 които се делят на 3 (използвайте for).</p>
     </blockquote>
     <button type="button" onclick="divideByThree()">Провери</button>
-    <p>Числата са: <span class="outputs" id="divideByThreeOutput"></span></p>
-    <hr>
+    <p>Числата са: <blockquote class="outputs" id="divideByThreeOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 4</h2>
@@ -48,8 +57,7 @@
       <p>Напишете скрипт който принтира всички числа от 20 до 0 (използвайте for).</p>
     </blockquote>
     <button type="button" onclick="backwardsCount()">Провери</button>
-    <p>Числата са: <span class="outputs" id="backwardsCountOutput"></span></p>
-    <hr>
+    <p>Числата са: <blockquote class="outputs" id="backwardsCountOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 5</h2>
@@ -66,8 +74,7 @@ Hallo Welt!">DE</option>
 Здравей свят!">BG</option>
     </select>
     <button type="button" onclick="languageCheck()">Провери</button>
-    <p>"Hello World" на <span class="outputs" id="lg"></span> e : <span class="outputs" id="languageCheckOutput"></span></p>
-    <hr>
+    <p>"Hello World" на <blockquote class="outputs" id="lg" style="margin-right: 16px;"></blockquote><blockquote class="outputs" id="languageCheckOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 6</h2>
@@ -81,8 +88,7 @@ Hallo Welt!">DE</option>
     </blockquote>
     <input id="score">
     <button type="button" onclick="scoreCheck()">Провери</button>
-    <p>Оценката е : <span class="outputs" id="scoreCheckOutput"></span></p>
-    <hr>
+    <p>Оценката е : <blockquote class="outputs" id="scoreCheckOutput"></blockquote></p>
   </section>
   <section>
     <h2>Упражнение 7</h2>
@@ -91,8 +97,7 @@ Hallo Welt!">DE</option>
     </blockquote>
     <input id="monthNum">
     <button type="button" onclick="monthCheck()">Провери</button>
-    <p>Името на месеца е : <span class="outputs" id="monthCheckOutput"></span></p>
-    <hr>
+    <p>Името на месеца е : <blockquote class="outputs" id="monthCheckOutput"></blockquote></p>
   </section>
   <script src="function.js"></script>
 </body>
