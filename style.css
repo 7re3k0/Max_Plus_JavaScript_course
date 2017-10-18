@@ -8,7 +8,9 @@ body {
   margin: 0 auto;
   background-color: #f4f5f6;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 main {
   padding: 80px 5%;
