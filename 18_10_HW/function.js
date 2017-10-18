@@ -6,7 +6,7 @@ var arr = [],
 
 
 function minNumberArr() {
-  arr = [1, 4, 6, -8, 99, -98, 3, 478, -54, 123, 0];
+  arr = [1, 4, 6, -8, 99, -98, 3, 478, -54, -123, 0];
   x = [];
   for (i = 0; i < arr.length; i++) {
     if (x == undefined) {
