@@ -99,7 +99,7 @@ blockquote p {
 
 blockquote xmp {
   display: inline-block;
-  background-color: lightgray;
+  background-color: #f4f5f6;
   font-weight: bold;
   padding: 2px 3px;
   margin: 0;
