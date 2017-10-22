@@ -40,3 +40,27 @@ function converter() {
   };
 
 }
+
+function mathAction() {
+  var number_1 = document.getElementById('number_1').value,
+  number_2 = document.getElementById('number_2').value,
+  action = document.getElementById('action').value;
+
+  number_1 = Number(number_1);
+  number_2 = Number(number_2);
+
+  document.getElementById('mathActionOutput').innerHTML = number_1 + ' ' + action + ' ' + number_2 + ' <span class="highlight">=</span> ' + calculation(number_1, number_2, action);
+  document.getElementById('mathActionOutput').style.display = 'block';
+
+  function calculation(num1, num2, calculator) {
+    if (calculator == '*') {
+      return num1 * num2;
+    } else if (calculator == '/') {
+      return num1 / num2;
+    } else if (calculator == '+') {
+      return num1 + num2;
+    } else if (calculator == '-') {
+      return num1 - num2;
+    }
+  }
+}

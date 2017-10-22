@@ -40,11 +40,29 @@
     <section>
       <h2>Упражнение 2</h2>
       <blockquote>
-        <p>Напишете функция която приема валутна единица и тип валута и конвертира подадените стойности в лева. Например обръщаме се към функцията converting_to_bgn(6, "usd"); и функцията да върне резултат подобен на 3.630312. Използвайте във функцията проверка за различни валути например - Щатски долар, Евро, Швейцарски франк, Британска лира и др. Нека да има и съобщение за грешка при подадена валута с която не работи функцията. Нека стойноста се върне с return и след това я отпечатайте по избран от вас начин.</p>
+        <p>Напишете функция която приема валутна единица и тип валута и конвертира подадените стойности в лева. Например обръщаме се към функцията converting_to_bgn(6, "usd"); и функцията да върне резултат подобен на 3.630312. Използвайте във функцията проверка
+          за различни валути например - Щатски долар, Евро, Швейцарски франк, Британска лира и др. Нека да има и съобщение за грешка при подадена валута с която не работи функцията. Нека стойноста се върне с return и след това я отпечатайте по избран
+          от вас начин.</p>
       </blockquote>
       <span>Брой: </span><input type="number" value="0" id="ammount"><span>Валута: </span><input type="text" id="currency">
       <button type="button" class="button" onclick="converter()">конвертирай</button>
       <blockquote class="outputs" id="converterOutput"></blockquote>
+    </section>
+    <section>
+      <h2>Упражнение 3</h2>
+      <blockquote>
+        <p>Напишете функция която приема три променливи - първите две цифри и трета математическо действие (умножение, деление, събиране и изваждане). Нека резултата да се върне с return и след това я отпечатайте по избран от вас начин.</p>
+      </blockquote>
+      <span>Цифра 1: </span><input type="number" value="" id="number_1"><span>Цифра 2: </span><input type="number" id="number_2"><span>Действие: </span>
+      <select id="action">
+        <option disabled selected value style="display:none"> -- моля изберете -- </option>
+        <option value="*">Умножение</option>
+        <option value="/">Деление</option>
+        <option value="+">Събиране</option>
+        <option value="-">Изваждане</option>
+      </select>
+      <button type="button" class="button" onclick="mathAction()">пресметни</button>
+      <blockquote class="outputs" id="mathActionOutput"></blockquote>
     </section>
 
   </main>
