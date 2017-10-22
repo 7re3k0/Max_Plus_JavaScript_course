@@ -43,8 +43,8 @@ function converter() {
 
 function mathAction() {
   var number_1 = document.getElementById('number_1').value,
-  number_2 = document.getElementById('number_2').value,
-  action = document.getElementById('action').value;
+    number_2 = document.getElementById('number_2').value,
+    action = document.getElementById('action').value;
 
   number_1 = Number(number_1);
   number_2 = Number(number_2);
@@ -68,7 +68,7 @@ function mathAction() {
 
 function citiesPrint() {
 
-  document.getElementById('citiesPrintOutput').innerHTML = '<select style="margin:0;" id="cities">'+ options('Sofia', 'Zagreb', 'Istandbul') + '</select>';
+  document.getElementById('citiesPrintOutput').innerHTML = '<select style="margin:0;" id="cities">' + options('Sofia', 'Zagreb', 'Istandbul') + '</select>';
   document.getElementById('citiesPrintOutput').style.display = 'block';
 
   function options() {
@@ -81,8 +81,10 @@ function citiesPrint() {
 }
 
 function shopping_cart() {
-  var produkt = '', brojkka = '', price = '',
-  output = document.getElementById('shopping_cartOutput');
+  var produkt = '',
+    brojkka = '',
+    price = '',
+    output = document.getElementById('shopping_cartOutput');
   var shopping_Cart = [];
   shopping_Cart[0] = [];
   shopping_Cart[1] = [];
@@ -108,3 +110,44 @@ function shopping_cart() {
   output.innerHTML = '<div class="table"><div class="left col"><h4>Продукт</h4>' + produkt + '</div><div class="mid col"><h4>Бройка</h4>' + brojkka + '</div><div class="right col"><h4>Цена</h4>' + price + '</div>';
   output.style.display = 'flex';
 }
+
+function numToWords() {
+  var input = document.getElementById('num_input').value,
+    digits = [],
+    output = document.getElementById('numToWordsOutput'),
+    ones = ['','едно','две','три','четири', 'пет','шест','седем', 'осем', 'девет'],
+    tiltwenty = ['десет','единадесет', 'дванадесет', 'тринадесет','четиринадесет','петнадесет','шестнадесет','седемнадесет','осемнадесет', 'деветнадесет'],
+    tens = ['','','двадесет','тридесет','четиредесет','петдесет','шестдесет','седемдесет','осемдесет', 'деветдесет'];
+
+  if (input == 0 || input >= 100) {
+    alert('Моля изберете число само от 1 до 99!');
+  } else {
+    //split "input" to an array
+    input = input.split("");
+
+    for (var i = 0; i < input.length; i++) {
+      //convert the "string digits" to nymbers again and push in new array
+      input[i] = Number(input[i]);
+      digits.push(input[i]);
+    }
+
+    if (digits.length == 1) {
+      output.innerHTML = '<span style="text-transform: capitalize;">' + ones[digits[0]] + '</span>';
+      output.style.display = 'inline';
+    } else {
+      if (digits[0] != 1 && digits[1] == 0) {
+        output.innerHTML = '<span style="text-transform: capitalize;">' + tens[digits[0]] + '</span>';
+        output.style.display = 'inline';
+      } else if (digits[0] == 1 && digits[1] == 0) {
+        output.innerHTML = '<span style="text-transform: capitalize;">' + tiltwenty[0] + '</span>';
+        output.style.display = 'inline';
+      } else if (digits[0] == 1 && digits[1] != 0) {
+        output.innerHTML = '<span style="text-transform: capitalize;">' + tiltwenty[digits[1]] + '</span>';
+        output.style.display = 'inline';
+      } else {
+        output.innerHTML = '<span style="text-transform: capitalize;">' + tens[digits[0]] + '</span> и ' + ones[digits[1]];
+        output.style.display = 'inline';
+      }
+    }
+    }
+  }
