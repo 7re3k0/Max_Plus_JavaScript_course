@@ -37,6 +37,15 @@
       <button type="button" class="button" onclick="printName()">принтирай</button>
       <blockquote class="outputs" id="printNameOutput"></blockquote>
     </section>
+    <section>
+      <h2>Упражнение 2</h2>
+      <blockquote>
+        <p>Напишете функция която приема валутна единица и тип валута и конвертира подадените стойности в лева. Например обръщаме се към функцията converting_to_bgn(6, "usd"); и функцията да върне резултат подобен на 3.630312. Използвайте във функцията проверка за различни валути например - Щатски долар, Евро, Швейцарски франк, Британска лира и др. Нека да има и съобщение за грешка при подадена валута с която не работи функцията. Нека стойноста се върне с return и след това я отпечатайте по избран от вас начин.</p>
+      </blockquote>
+      <span>Брой: </span><input type="number" value="0" id="ammount"><span>Валута: </span><input type="text" id="currency">
+      <button type="button" class="button" onclick="converter()">конвертирай</button>
+      <blockquote class="outputs" id="converterOutput"></blockquote>
+    </section>
 
   </main>
   <script src="function.js"></script>
