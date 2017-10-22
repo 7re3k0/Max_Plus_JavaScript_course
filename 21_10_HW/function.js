@@ -64,3 +64,18 @@ function mathAction() {
     }
   }
 }
+
+
+function citiesPrint() {
+
+  document.getElementById('citiesPrintOutput').innerHTML = '<select style="margin:0;" id="cities">'+ options('Sofia', 'Zagreb', 'Istandbul') + '</select>';
+  document.getElementById('citiesPrintOutput').style.display = 'block';
+
+  function options() {
+    var option_items = '';
+    for (var i = 0; i < arguments.length; i++) {
+      option_items += '<option>' + arguments[i] + '</option>';
+    }
+    return option_items;
+  }
+}
