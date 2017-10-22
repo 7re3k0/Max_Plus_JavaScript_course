@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>23.10 Домашно</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <title>23.10 Домашно</title>
 
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
 
-    <!-- Milligram CSS minified -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
 
-    <!-- Font Awesome CSS minified -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Milligram CSS minified -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
-    <!--  Main Stylesheet-->
-    <!-- <link rel="stylesheet" href="/Max_Plus_JavaScript_course/style.css"> -->
-    <link rel="stylesheet" href="../style.css">
-  </head>
-  <body>
-    <main>
-      <header>
-        <h3><a href="/Max_Plus_JavaScript_course"><i class="fa fa-arrow-left" aria-hidden="true"></i> Обратно</a></h3>
-        <h1>Домашно за 23.10</h1>
-        <h4><a href="https://github.com/7re3k0/Max_Plus_JavaScript_course/blob/master/23_10_HW/function.js" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Линк към JS файла</a></h4>
-      </header>
-    </main>
+  <!-- Font Awesome CSS minified -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </body>
+  <!--  Main Stylesheet-->
+  <!-- <link rel="stylesheet" href="/Max_Plus_JavaScript_course/style.css"> -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h3><a href="/Max_Plus_JavaScript_course"><i class="fa fa-arrow-left" aria-hidden="true"></i> Обратно</a></h3>
+      <h1>Домашно за 23.10</h1>
+      <h4><a href="https://github.com/7re3k0/Max_Plus_JavaScript_course/blob/master/23_10_HW/function.js" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Линк към JS файла</a></h4>
+    </header>
+    <section>
+      <h2>Упражнение 1</h2>
+      <blockquote>
+        <p>Напишете функция която приема параметър(променлива) name. При извикване на функцията отпечатва: Здравейте, name!</p>
+      </blockquote>
+      <span>Името ти е: </span><input type="text" id="yourName">
+      <button type="button" class="button" onclick="printName()">принтирай</button>
+      <blockquote class="outputs" id="printNameOutput"></blockquote>
+    </section>
+
+  </main>
+  <script src="function.js"></script>
+</body>
+
 </html>
