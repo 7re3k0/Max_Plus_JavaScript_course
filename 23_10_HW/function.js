@@ -79,3 +79,32 @@ function citiesPrint() {
     return option_items;
   }
 }
+
+function shopping_cart() {
+  var produkt = '', brojkka = '', price = '',
+  output = document.getElementById('shopping_cartOutput');
+  var shopping_Cart = [];
+  shopping_Cart[0] = [];
+  shopping_Cart[1] = [];
+  shopping_Cart[2] = [];
+  shopping_Cart[3] = [];
+  shopping_Cart[0]['prdukt'] = "qjca";
+  shopping_Cart[0]['brojkka'] = "12";
+  shopping_Cart[0]['price'] = "5";
+  shopping_Cart[1]['prdukt'] = "mlqko";
+  shopping_Cart[1]['brojkka'] = "1";
+  shopping_Cart[1]['price'] = "2";
+  shopping_Cart[2]['prdukt'] = "hlqb";
+  shopping_Cart[2]['brojkka'] = "1";
+  shopping_Cart[2]['price'] = "1";
+  shopping_Cart[3]['prdukt'] = "bira";
+  shopping_Cart[3]['brojkka'] = "1";
+  shopping_Cart[3]['price'] = "1";
+  for (var i = 0; i < shopping_Cart.length; i++) {
+    produkt += '<div>' + shopping_Cart[i]['prdukt'] + '</div>';
+    brojkka += '<div>' + shopping_Cart[i]['brojkka'] + '</div>';
+    price += '<div>' + shopping_Cart[i]['price'] + '</div>';
+  }
+  output.innerHTML = '<div class="table"><div class="left col"><h4>Продукт</h4>' + produkt + '</div><div class="mid col"><h4>Бройка</h4>' + brojkka + '</div><div class="right col"><h4>Цена</h4>' + price + '</div>';
+  output.style.display = 'flex';
+}

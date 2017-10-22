@@ -134,3 +134,14 @@ button:focus {
 .highlight {
   color: #9b4dca;
 }
+
+.table {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.table .col {
+  flex-direction: column;
+  margin-right: 16px;
+}
