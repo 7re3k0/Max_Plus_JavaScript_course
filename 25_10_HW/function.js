@@ -34,10 +34,12 @@ console.log([mastif,maltese,chowChow]);
 var jeff = Object.assign({}, chowChow);
 console.log('----------------Упражнение 3----------------');
 function jeffChange() {
+  console.log(chowChow);
   console.log(jeff);
-  jeff.age = 10;
+  jeff.age   = 10;
   jeff.color = 'Orange';
   console.log('After change:');
+  console.log(chowChow);
   console.log(jeff);
 }
 jeffChange();
