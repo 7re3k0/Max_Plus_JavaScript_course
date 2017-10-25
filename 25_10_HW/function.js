@@ -33,11 +33,14 @@ console.log([mastif,maltese,chowChow]);
 //3. Копирайте един от обектите и променете неговите години и цвят (промените да важат само за новия обект, използвайте Object.assign)
 var jeff = Object.assign({}, chowChow);
 console.log('----------------Упражнение 3----------------');
-console.log(jeff);
-jeff.age = 10;
-jeff.color = 'Orange';
-console.log('After change:');
-console.log(jeff);
+function jeffChange() {
+  console.log(jeff);
+  jeff.age = 10;
+  jeff.color = 'Orange';
+  console.log('After change:');
+  console.log(jeff);
+}
+jeffChange();
 
 //4. Направете така, че едно куче да отговаря на различни имена (различни променливи да сочат към едно и също куче)
 jeff.name = {
