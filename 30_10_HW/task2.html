@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>animate</title>
+        <style>
+            .container-box {
+                position: relative;
+                height: 60px;
+            }
+            #box1, #box2 {
+                position: absolute;
+                width: 55px;
+                height: 55px;
+                left: 0;
+                top: 0;
+            }
+            #box1 {
+                background-color: cyan;
+                animation-name: moveBox;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+            #box2 {
+                background-color: magenta;
+            }
+            @keyframes moveBox {
+                0% {
+                    left: 0;
+                }
+                100% {
+                    left:500px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-box">
+            <div id="box1"></div>
+        </div>
+        <div class="container-box">
+            <div id="box2"></div>
+        </div>
+        <script>
+            var box = document.getElementById('box2'),
+            position = 0,
+            moveBox = setInterval(movement, 1)
+            function movement() {
+              if (position == 500) {
+                // clearInterval(box);
+              } else {
+                position++;
+                box.style.left = position + 'px';
+              }
+            };
+
+        </script>
+    </body>
+</html>
