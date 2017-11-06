@@ -1,16 +1,3 @@
-//Excercise 2:
-var box = document.getElementById('box2'),
-position = 0,
-moveBox = setInterval(movement, 1)
-function movement() {
-  if (position == 500) {
-    // clearInterval(box);
-  } else {
-    position++;
-    box.style.left = position + 'px';
-  }
-};
-
 //Excercise 3: don't understand the task
 
 //Excercise 4:
