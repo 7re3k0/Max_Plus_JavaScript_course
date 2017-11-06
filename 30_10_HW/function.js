@@ -1,4 +1,24 @@
 //Excercise 3: don't understand the task
+var id = document.getElementById('list'),
+array = ['purvo', 'vtoro', 'treto'],
+id2 = document.getElementById('list2'),
+array2 = ['chetwurto', 'peto', 'shesto'];
+
+function listCreateFunc(a, b) {
+  for (var i = 0; i < b.length; i++) {
+    var li = document.createElement('LI');
+    li.innerHTML = b[i];
+    a.appendChild(li);
+  }
+}
+function listCreate() {
+  listCreateFunc(id,array);
+}
+function listCreate2(){
+  listCreateFunc(id2,array2);
+}
+
+//END
 
 //Excercise 4:
 var num = 0;
