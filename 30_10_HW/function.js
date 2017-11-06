@@ -1,8 +1,8 @@
 //Excercise 3: don't understand the task
 var id = document.getElementById('list'),
-array = ['purvo', 'vtoro', 'treto'],
+array = ['Първо', 'Второ', 'Трето'],
 id2 = document.getElementById('list2'),
-array2 = ['chetwurto', 'peto', 'shesto'];
+array2 = ['Четвърто', 'Пето', 'Шесто'];
 
 function listCreateFunc(a, b) {
   for (var i = 0; i < b.length; i++) {
