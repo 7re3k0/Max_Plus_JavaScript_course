@@ -28,9 +28,19 @@
             <p> paragraph 3</p>
             <p class="special"> paragraph 4</p>
         </div>
-        
+
         <script>
-            
+        $(function () {
+          //Ex 4
+          $('ul').children().css('color', 'red');
+
+          //Ex 5
+          $('ol').find('span').css('color', 'green');
+
+          //Ex 6
+          $('div.container p.special').css('color', 'blue');
+
+        });
         </script>
     </body>
 </html>
