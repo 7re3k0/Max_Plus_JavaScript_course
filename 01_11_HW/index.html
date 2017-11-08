@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--  Main Stylesheet-->
-  <!-- <link rel="stylesheet" href="/Max_Plus_JavaScript_course/style.css"> -->
   <link rel="stylesheet" href="../style.css">
   <style media="screen">
     td:first-child, th:first-child{
@@ -42,11 +41,21 @@
     <header>
       <h3><a href="/Max_Plus_JavaScript_course"><i class="fa fa-arrow-left" aria-hidden="true"></i> Обратно</a></h3>
       <h1>Домашно за 01.11</h1>
-      <h4><a href="https://github.com/7re3k0/Max_Plus_JavaScript_course/blob/master/25_10_HW/function.js" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Линк към JS файла</a></h4>
+      <h4><a href="https://github.com/7re3k0/Max_Plus_JavaScript_course/blob/master/01_11_HW/function.js" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> Линк към JS файла</a></h4>
     </header>
     <section>
       <h2>Калкулатор</h2>
-      <table border="1" style="max-width: 50%;">
+      <blockquote>
+        <p>Създайте калкулатор по примера в файла homework-calc.html <br>
+- при натискане на цифра от таблицата да попълва числата и математически знак в инпут полето.  <br>
+- При натискане на знака "равно"(=) да изчислява резултата с eval() и да изчисти инпут полето.<br>
+- Бутончето clear да чисти въведените стойности от инпут полето.<br>
+- Когато мишката посочи калкулатора(onmouseenter) да се смени фона на таблицата, когато мишката излезе(onmouseleave) от калкулатора фона да стане отново бял.<br>
+- При фокус(onfocus) на инпут полето да има зелена рамка на инпут полето, при махане на фокуса(onblur) черна рамка.<br>
+- Направете калкулатора да смята също при натискане на копчета от клавиатурата. </p>
+      </blockquote>
+      <br>
+      <table onmouseover="bgChange(this)" onmouseout="bgNormal(this)" border="1" style="max-width: 50%;">
           <tr>
               <td>1</td>
               <td>2</td>
@@ -74,8 +83,8 @@
           </tr>
           <tr>
               <td colspan="3">
-                  <input type="text" id="input" style="min-width: 100%"/>
-                  <button id="clear">clear</button>
+                  <input type="text" id="input" style="min-width: 100%" />
+                  <button id="clearBtn">clear</button>
                   <b id="result" style="display: block;"></b>
               </td>
           </tr>
