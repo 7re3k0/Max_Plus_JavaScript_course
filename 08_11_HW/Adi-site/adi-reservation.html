@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
         <link rel=stylesheet href="fullpage.css">
+        <script src="jquery-3.2.1.min.js" charset="utf-8"></script>
     </head>
     <body>
         <div>
@@ -168,13 +169,6 @@
                                 <td colspan="2">
                                     Списък на всички туристи които ще пътуват:
                                     <button type="button" id="addRow">добави турист</button>
-                                    <script>
-                                            document.getElementById('addRow').onclick = function() {
-                                                    var clone = document.getElementById('cloneRow').cloneNode(true);
-                                                    clone.removeAttribute('id');
-                                                    document.getElementById('tourist').appendChild(clone);
-                                            };
-                                    </script>
                                     <table id="tourist">
                                         <tr>
                                             <th>Име, презиме и фамилия</th>
@@ -186,11 +180,39 @@
                                             <td><input type="text" name="allName[]" /></td>
                                             <td><input type="text" name="allEgn[]" /></td>
                                             <td><input type="text" name="allPhone[]" /></td>
-                                            <td><button type="button">изтрий</button></td>
+                                            <td><button type="button" class="remover">изтрий</button></td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
+                            <script>
+                            //Own way of cloning a row
+                              $('#addRow').click(function() {
+                                $('#cloneRow').clone(true).removeAttr('id').appendTo('#tourist tbody');
+                              });
+                            //Whenever button is pressed, trigger the function
+                              $('.remover').click(function() {
+                                //Get the TR of this elevement and only the bounding one
+                                var parentTr = $(this).parents('tr')[0];
+
+                                //If the TR has an ID of cloneRow
+                                if (parentTr.id == 'cloneRow') {
+                                  var touristTable = $('#tourist tr');
+                                  if (touristTable.length == 3) {
+                                    touristTable[2].remove()
+                                  } else if (touristTable.length > 3) {
+                                    touristTable[touristTable.length-1].remove();
+                                  } else {
+                                    alert('Моля попълнете поне един!');
+                                    return;
+                                  }
+                                } else {
+                                  //Else, remove this entire row from the DOM
+                                  parentTr.remove();
+                                  return ;
+                                }
+                              });
+                            </script>
                             <tr>
                                 <td>Допълнителна информация:</td>
                                 <td><textarea name="moreInfo"></textarea></td>
