@@ -40,6 +40,7 @@ header h4 .fa {
 header h3 {
   position: absolute;
   top: 12px;
+  left: -8px;
   display: block;
 }
 
