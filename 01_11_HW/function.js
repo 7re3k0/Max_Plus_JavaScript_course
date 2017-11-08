@@ -14,10 +14,8 @@ document.getElementsByTagName('table')[0].addEventListener('click', function(e) 
     return;
   } else if (target == equal) {
     var tempResult = input.value;
-    input.value = eval(tempResult);
-    setTimeout(function() {
-      input.value = ''
-    }, 1000);
+    result.innerHTML = eval(tempResult);
+    input.value = '';
     return ;
   } else {
     input.value += text;
@@ -37,12 +35,11 @@ document.getElementById("input")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-      var input = document.getElementById('input');
+      var input = document.getElementById('input'),
+      result = document.getElementById('result');
       var tempResult = input.value;
-      input.value = eval(tempResult);
-      setTimeout(function() {
-        input.value = ''
-      }, 1000);
+      result.innerHTML = eval(tempResult);
+      input.value = '';
       return ;
     }
 });
